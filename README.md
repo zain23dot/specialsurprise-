@@ -1,9 +1,9 @@
-# specialsurprise-
-# Cute Pink & Purple Music Celebration Site
+# 🌸 Birthday Celebration Mini-Website ✨
 
-A 5-page interactive experience featuring glassmorphism, background music, floating hearts, confetti, fireworks, and animations.
+An interactive visual experience tailored with sweet animations using glassmorphism components.
 
-## How to Get Your QR Code
-1. Copy your GitHub Pages URL (found under Settings > Pages).
-2. Go to any free QR code generator (like qr-code-generator.com or me-qr.com).
-3. Paste your URL and download the QR code!
+## 🛠️ Customization Guide
+
+1. **Passcode:** Modify the variable value `SECRET_PASSCODE` near the top of `script.js`.
+2. **Music:** Locate the `<audio>` tag inside `index.html` and replace the placeholder stream URL with a direct link to your target song.
+3. **Photos:** Replace the mockup links inside the `slider` div block (`index.html`) with actual paths once uploaded.
