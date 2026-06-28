@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Someone Special ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <canvas id="animationCanvas"></canvas>
+
+    <div class="music-container">
+        <button id="musicBtn" class="glass-btn"><i class="fas fa-music"></i></button>
+        <audio id="bgMusic" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    </div>
+
+    <section id="page1" class="page active">
+        <div class="glass-card text-center">
+            <h2>🔒 Enter Passcode</h2>
+            <p>To enter the secret world...</p>
+            <input type="password" id="passwordInput" placeholder="Hint: Type '1234'">
+            <button onclick="checkPassword()" class="animated-btn">Unlock</button>
+            <p id="loginError" class="error-msg"></p>
+        </div>
+    </section>
+
+    <section id="page2" class="page">
+        <div class="glass-card text-center">
+            <h1 class="typewriter">Happy Special Day! 🎉</h1>
+            <p class="fade-in">Every day is brighter with you. Here is a little surprise I made just for you...</p>
+            <button onclick="nextPage(3)" class="animated-btn">Open Surprise 🎁</button>
+        </div>
+    </section>
+
+    <section id="page3" class="page">
+        <div class="grid-container">
+            <div class="glass-card square-card">
+                <h3>🌸 Smile</h3>
+                <p>Your smile makes the whole world light up instantly.</p>
+            </div>
+            <div class="glass-card square-card">
+                <h3>🎵 Melody</h3>
+                <p>Just like my favorite song, you are always on my mind.</p>
+            </div>
+            <div class="glass-card square-card">
+                <h3>✨ Sparkle</h3>
+                <p>Never lose your sparkle, you are incredibly rare.</p>
+            </div>
+            <div class="glass-card square-card">
+                <h3>💖 Wish</h3>
+                <p>I hope all your dreams, big and small, come true today!</p>
+            </div>
+        </div>
+        <button onclick="nextPage(4)" class="animated-btn floating-bottom-btn">Next 👀</button>
+    </section>
+
+    <section id="page4" class="page">
+        <div class="glass-card text-center">
+            <h1 class="big-wish">✨ You Mean The World ✨</h1>
+            
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="https://picsum.photos/id/1025/400/300" alt="Memory 1"></div>
+                    <div class="slide"><img src="https://picsum.photos/id/1043/400/300" alt="Memory 2"></div>
+                    <div class="slide"><img src="https://picsum.photos/id/1062/400/300" alt="Memory 3"></div>
+                </div>
+            </div>
+
+            <button onclick="nextPage(5); triggerGiftAnimation();" class="animated-btn">Final Surprise 🌟</button>
+        </div>
+    </section>
+
+    <section id="page5" class="page">
+        <div class="glass-card text-center">
+            <div id="giftBox" onclick="openGift()">
+                <div class="gift-lid"></div>
+                <div class="gift-body">🎁</div>
+            </div>
+            
+            <div id="finalMessage" class="hidden">
+                <h1 class="rainbow-text">🎈 Forever & Always 🎈</h1>
+                <p>Thank you for being you! May your life be filled with endless music and joy.</p>
+                <button onclick="restartExperience()" class="animated-btn">Restart 🔄</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
